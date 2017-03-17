@@ -1,0 +1,19 @@
+header{
+    background: #000;
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    width: 100%;
+}
+.logo{
+    float: left;
+    width: 35%;
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 0 2px 20px;  
+}
+.menu_items{
+    float: left;
+    width:  50%;
+    color: #fff;
+    padding: 2px 20px 2px 0px; 
+}
