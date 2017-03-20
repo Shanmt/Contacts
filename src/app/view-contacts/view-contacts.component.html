@@ -2,13 +2,13 @@
 <div class="container">
     
     <div class="list_contacts">
-        <div *ngFor="let contacts of allcontacts" class="contacts">
+        <div *ngFor="let contacts of allcontacts" class="contacts" (click)="onSelect(contacts)">
             {{contacts.name}}
         </div>
     </div>
 
     <div class="view_contact_details">
-        
+        <contact-details [contacts]="currentContact"></contact-details>
     </div>
 
 </div>

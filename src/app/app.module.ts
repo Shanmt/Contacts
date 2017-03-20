@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactDetailsComponent } from './view-contacts/contact-details/contact-details.component';
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ViewContactsComponent } from './view-contacts/view-contacts.component';
                   AppComponent,
                   HeaderComponent,
                   FooterComponent,
-                  ViewContactsComponent
+                  ViewContactsComponent,
+                  ContactDetailsComponent
                 ],
 
   bootstrap:    [ AppComponent ]

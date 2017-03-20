@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { Contacts } from "../contacts";
 
-const contacts = [
+const contacts:Contacts[] = [
         {"id":1,"name":"abc1","phone":"99999999991","email":"abc1@abc.com"},
         {"id":2,"name":"abc2","phone":"99999999992","email":"abc2@abc.com"},
         {"id":3,"name":"abc3","phone":"99999999993","email":"abc3@abc.com"},
@@ -16,11 +18,15 @@ const contacts = [
     styleUrls:['./app/view-contacts/view-contacts.component.css']
 })
 export class ViewContactsComponent {
+    currentContact:Contacts;
     allcontacts = contacts;
    
     constructor() {
-
-
-     }
+        
+    }
+    onSelect( people:Contacts ): void {
+        console.log(people);
+        this.currentContact = people;
+    }
 
 }
