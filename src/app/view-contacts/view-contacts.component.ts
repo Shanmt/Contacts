@@ -25,7 +25,6 @@ export class ViewContactsComponent {
         
     }
     onSelect( people:Contacts ): void {
-        console.log(people);
         this.currentContact = people;
     }
 

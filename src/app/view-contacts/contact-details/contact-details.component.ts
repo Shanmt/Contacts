@@ -6,7 +6,9 @@ import { Contacts } from "../../contacts";
     selector: 'contact-details',
     template: `<div *ngIf="contacts">
                 <h2>{{contacts.name}} details!</h2>
-                <div><label>id: </label>{{contacts.id}}</div>
+                    <div><label>Contact Name:<b>{{contacts.name}}</b></label></div> 
+                    <div><label>Phone Number:<b>{{contacts.phone}}</b></label></div> 
+                    <div><label>Email Address: <b>{{contacts.email}}</b></label></div> 
                 </div>
     `
 })

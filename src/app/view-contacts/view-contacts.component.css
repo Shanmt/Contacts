@@ -1,6 +1,7 @@
 /*styles*/
 .list_contacts{
-    width: 40%
+    width: 40%;
+    float: left;
 
 }
 .contacts{
@@ -14,4 +15,13 @@
     border-bottom: 1px solid #fff;
     color: #fff;
 
+}
+.view_contact_details{
+    width: 50%;
+    float: left;
+    padding: 2%; 
+
+}
+.clear{
+    clear: both;
 }
