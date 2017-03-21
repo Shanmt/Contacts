@@ -2,4 +2,65 @@
 
 <h2>Add Contacts</h2>
 
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Hero Form</h1>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+        <div *ngIf="name.errors && (name.dirty || name.touched)"
+            class="alert alert-danger">
+            <div [hidden]="!name.errors.required">  
+            Name is required
+            </div>
+            <div [hidden]="!name.errors.minlength">
+            Name must be at least 4 characters long.
+            </div>
+            <div [hidden]="!name.errors.maxlength">
+            Name cannot be more than 24 characters long.
+            </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Phone</label>
+        <input type="text" class="form-control" id="phone"
+               [(ngModel)]="model.phone" name="phone">
+      </div>
+      
+      <div class="form-group">
+        <label for="alterEgo">Email</label>
+        <input type="text" class="form-control" id="email"
+               [(ngModel)]="model.email" name="email">
+      </div>
+      
+      <button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid">Submit</button>
+     
+    </form>
+  </div>
+  <br />
+</div>
+  <!--<div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Alter Ego</div>
+      <div class="col-xs-9 pull-left">{{ model.alterEgo }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Power</div>
+      <div class="col-xs-9 pull-left">{{ model.power }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>-->
+
+
+
+
 <main-footer></main-footer>

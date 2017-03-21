@@ -1,6 +1,9 @@
 export class Contacts{
-    id:Number;
-    name:String;
-    phone:String;
-    email:String;
+
+    constructor(
+        public id:Number,
+        public name:String,
+        public phone:String,
+        public email:String
+    ){}
 }
