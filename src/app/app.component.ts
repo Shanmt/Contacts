@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<view-contacts></view-contacts>
+  template: `<router-outlet></router-outlet>
             `,
 })
 export class AppComponent  { name = 'Angular'; }
