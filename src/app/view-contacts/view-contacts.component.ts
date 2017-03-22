@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { Contacts } from "../contacts";
+import { ContactsService } from '../shared/contacts.service';
 
 const contacts:Contacts[] = [
         {"id":1,"name":"abc1","phone":"99999999991","email":"abc1@abc.com"},
@@ -18,11 +19,13 @@ const contacts:Contacts[] = [
     styleUrls:['./app/view-contacts/view-contacts.component.css']
 })
 export class ViewContactsComponent {
-    currentContact:Contacts;
-    allcontacts = contacts;
+    currentContact: Contacts;
+    allcontacts: Contacts[] = contacts;
    
-    constructor() {
-        
+    constructor(private contactservice: ContactsService) {
+        /*this.contactservice.getUsers().subscribe(data => {
+            this.allcontacts = data;
+        });*/
     }
     onSelect( people:Contacts ): void {
         this.currentContact = people;

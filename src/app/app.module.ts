@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule, Routes } from "@angular/router";
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,7 @@ import { ContactDetailsComponent } from './view-contacts/contact-details/contact
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactsService } from './shared/contacts.service';
 
 const appRoutes: Routes = [
   { path: 'view', component: ViewContactsComponent },
@@ -20,7 +22,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes),FormsModule, ReactiveFormsModule ],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes),FormsModule, ReactiveFormsModule, HttpModule ],
 
   declarations: [ 
                   AppComponent,
@@ -33,6 +35,6 @@ const appRoutes: Routes = [
                 ],
 
   bootstrap:    [ AppComponent ],
-  providers: []
+  providers: [ContactsService]
 })
 export class AppModule { }
