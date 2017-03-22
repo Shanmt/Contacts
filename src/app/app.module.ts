@@ -10,15 +10,17 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactDetailsComponent } from './view-contacts/contact-details/contact-details.component';
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const appRoutes: Routes = [
   { path: 'view', component: ViewContactsComponent },
   { path: 'add', component: AddContactComponent },
+  { path: 'contact', component: ContactFormComponent },
   { path: '',   redirectTo: '/view', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes),FormsModule,ReactiveFormsModule ],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes),FormsModule, ReactiveFormsModule ],
 
   declarations: [ 
                   AppComponent,
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
                   FooterComponent,
                   ViewContactsComponent,
                   ContactDetailsComponent,
-                  AddContactComponent
+                  AddContactComponent,
+                  ContactFormComponent
                 ],
 
   bootstrap:    [ AppComponent ],

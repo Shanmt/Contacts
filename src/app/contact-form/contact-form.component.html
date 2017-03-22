@@ -1,0 +1,47 @@
+<main-header></main-header>
+<h2>Hero Detail</h2>
+
+<div class="container">
+    <form [formGroup]="contactForm" novalidate>
+    <div class="form-group">
+        <label class="center-block">Name:
+        <input class="form-control" formControlName="name">
+        <div *ngIf="contactForm.controls.name.errors" class="alert alert-danger">
+            This field is required!
+        </div>
+        <div *ngIf="contactForm.controls.name.errors && (contactForm.controls.name.dirty || contactForm.controls.name.touched)"
+            class="alert alert-danger">
+            <div [hidden]="!contactForm.controls.name.errors.required">  
+            Name is required
+            </div>
+            
+      </div>
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Message:
+        <input class="form-control" formControlName="message">
+        <div *ngIf="contactForm.controls.message.errors || (contactForm.controls.message.pristine)" class="alert alert-danger">This field is required!</div>
+        </label>
+    </div>
+    <fieldset formGroupName="details">
+    <div class="form-group">
+        <label class="center-block">Email:
+        <input class="form-control" formControlName="emailid">
+        <div *ngIf="contactForm.controls.details.controls.emailid.errors || (contactForm.controls.details.controls.emailid.pristine)" class="alert alert-danger">This field is required!</div>
+        
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Phone:
+        <input class="form-control" formControlName="phone">
+        </label>
+    </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-success"  [disabled]="!contactForm.valid">Submit</button>
+
+    </form>
+</div>
+
+<main-footer></main-footer>
