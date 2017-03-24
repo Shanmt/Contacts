@@ -8,6 +8,7 @@ export class HighlightDirective{
         el.nativeElement.style.backgroundColor = 'gold';
         el.nativeElement.style.color = '#c30e2e';
         el.nativeElement.style.width = '100%';
+        el.nativeElement.style.marginTop = '0px';
     }
     
 }
