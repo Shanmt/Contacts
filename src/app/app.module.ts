@@ -1,6 +1,5 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterModule, Routes } from "@angular/router";
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -11,18 +10,22 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactDetailsComponent } from './view-contacts/contact-details/contact-details.component';
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactsService } from './shared/contacts.service';
+import { ContactFormModule } from './contact-form/contact-form.module';
+import { RoutingModule } from './routing.module';
+import { DemoLinkComponent } from './view-contacts/demo-link/demo-link.component';
+import { DemoLink2Component } from './view-contacts/demo-link2/demo-link2.component';
 
-const appRoutes: Routes = [
-  { path: 'view', component: ViewContactsComponent },
-  { path: 'add', component: AddContactComponent },
-  { path: 'contact', component: ContactFormComponent },
-  { path: '',   redirectTo: '/view', pathMatch: 'full' }
-];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes),FormsModule, ReactiveFormsModule, HttpModule ],
+  imports:      [ 
+                  BrowserModule,
+                  FormsModule,
+                  ReactiveFormsModule,
+                  HttpModule,
+                  ContactFormModule,
+                  RoutingModule
+                ],
 
   declarations: [ 
                   AppComponent,
@@ -31,7 +34,9 @@ const appRoutes: Routes = [
                   ViewContactsComponent,
                   ContactDetailsComponent,
                   AddContactComponent,
-                  ContactFormComponent
+                  DemoLinkComponent,
+                  DemoLink2Component
+                  
                 ],
 
   bootstrap:    [ AppComponent ],
