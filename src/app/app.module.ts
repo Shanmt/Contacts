@@ -15,6 +15,7 @@ import { ContactFormModule } from './contact-form/contact-form.module';
 import { RoutingModule } from './routing.module';
 import { DemoLinkComponent } from './view-contacts/demo-link/demo-link.component';
 import { DemoLink2Component } from './view-contacts/demo-link2/demo-link2.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { DemoLink2Component } from './view-contacts/demo-link2/demo-link2.compon
                   ContactDetailsComponent,
                   AddContactComponent,
                   DemoLinkComponent,
-                  DemoLink2Component
+                  DemoLink2Component,
+                  HighlightDirective
                   
                 ],
 
