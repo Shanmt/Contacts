@@ -7,6 +7,7 @@ import { Contacts } from '../contacts';
     templateUrl: './app/add-contact/add-contact.component.html'
 })
 export class AddContactComponent {
+    heading:String= "Add Contacts";
     model = new Contacts(1,'Shan','99999999999','shanmt@live.com');
     constructor() { 
        

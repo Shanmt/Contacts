@@ -16,6 +16,7 @@ import { RoutingModule } from './routing.module';
 import { DemoLinkComponent } from './view-contacts/demo-link/demo-link.component';
 import { DemoLink2Component } from './view-contacts/demo-link2/demo-link2.component';
 import { HighlightDirective } from './highlight.directive';
+import { AppendPagePipe } from './append-page.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HighlightDirective } from './highlight.directive';
                   AddContactComponent,
                   DemoLinkComponent,
                   DemoLink2Component,
-                  HighlightDirective
+                  HighlightDirective,
+                  AppendPagePipe
                   
                 ],
 

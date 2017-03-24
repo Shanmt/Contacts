@@ -21,11 +21,9 @@ const contacts:Contacts[] = [
 export class ViewContactsComponent {
     currentContact: Contacts;
     allcontacts: Contacts[] = contacts;
-   
+    heading:String = "View Conatcts";
     constructor(private contactservice: ContactsService) {
-        /*this.contactservice.getUsers().subscribe(data => {
-            this.allcontacts = data;
-        });*/
+        
     }
     onSelect( people:Contacts ): void {
         this.currentContact = people;
